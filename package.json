@@ -1,0 +1,149 @@
+{
+  "name": "dsh-go-miniapp-kit",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "./lib/index.js",
+  "description": "微信小程序开发助手：项目骨架、页面四件套、上线自查与代码速查（dsh-go 原生插件）",
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "engines": {
+    "node": ">=22.19",
+    "dsh": ">=0.2.1-rc.2 <0.3.0-0"
+  },
+  "dshGo": {
+    "v": 1,
+    "title": {
+      "zh": "小程序工坊",
+      "en": "Mini Program Kit"
+    },
+    "icon": "wechat",
+    "wants": [
+      "draft"
+    ],
+    "contributes": {
+      "composer.actions": [
+        {
+          "id": "kit",
+          "label": {
+            "zh": "小程序",
+            "en": "Mini app"
+          },
+          "icon": "wechat",
+          "effect": {
+            "type": "open",
+            "page": "panel:home"
+          }
+        },
+        {
+          "id": "spec",
+          "label": {
+            "zh": "需求改写",
+            "en": "Spec"
+          },
+          "icon": "edit"
+        }
+      ],
+      "composer.tools": [
+        {
+          "id": "page",
+          "label": {
+            "zh": "页面模板",
+            "en": "Pages"
+          },
+          "icon": "file",
+          "panel": "page-files"
+        },
+        {
+          "id": "audit",
+          "label": {
+            "zh": "上线自查",
+            "en": "Audit"
+          },
+          "icon": "check",
+          "panel": "prelaunch"
+        }
+      ],
+      "panels": [
+        {
+          "id": "home",
+          "title": {
+            "zh": "小程序工坊",
+            "en": "Mini Program Kit"
+          },
+          "icon": "wechat",
+          "placement": [
+            "session.tab",
+            "features",
+            "chat.panel"
+          ]
+        },
+        {
+          "id": "project-setup",
+          "title": {
+            "zh": "新建项目",
+            "en": "New project"
+          },
+          "icon": "folder",
+          "placement": [
+            "session.tab",
+            "features"
+          ]
+        },
+        {
+          "id": "page-files",
+          "title": {
+            "zh": "页面四件套",
+            "en": "Page files"
+          },
+          "icon": "file",
+          "placement": [
+            "session.tab",
+            "features"
+          ]
+        },
+        {
+          "id": "prelaunch",
+          "title": {
+            "zh": "上线自查",
+            "en": "Audit"
+          },
+          "icon": "check",
+          "placement": [
+            "session.tab",
+            "features"
+          ]
+        }
+      ]
+    }
+  },
+  "exports": {
+    ".": "./lib/index.js",
+    "./package.json": "./package.json",
+    "./cordis.patch.yml": "./cordis.patch.yml"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md"
+  ],
+  "keywords": [
+    "dsh-plugin",
+    "dsh-bundle",
+    "dsh-go",
+    "wechat",
+    "miniprogram",
+    "微信小程序"
+  ],
+  "homepage": "https://github.com/ImSusua/dsh-go-miniapp-kit#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ImSusua/dsh-go-miniapp-kit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ImSusua/dsh-go-miniapp-kit/issues"
+  },
+  "license": "MIT"
+}
