@@ -24,11 +24,19 @@ A WeChat Mini Program development kit for dsh-go (DeepSeek Harness mobile): proj
 
 ## 安装
 
+从 npm（包发布后）：
+
 ```sh
 dsh plugin --profile web add dsh-go-miniapp-kit
 ```
 
-本地开发时把包名换成目录路径：
+直接从 GitHub 安装：
+
+```sh
+dsh plugin --profile web add github:ImSusua/dsh-go-miniapp-kit
+```
+
+本地开发时用目录路径：
 
 ```sh
 dsh plugin --profile web add /path/to/dsh-go-miniapp-kit
