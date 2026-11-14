@@ -130,6 +130,8 @@
     "README.md"
   ],
   "keywords": [
+    "deepseek-harness",
+    "dsh",
     "dsh-plugin",
     "dsh-bundle",
     "dsh-go",
